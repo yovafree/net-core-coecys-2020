@@ -1,0 +1,71 @@
+﻿@{
+    ViewData["Title"] = "Búsqueda de Películas";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <form method="post">
+            <div class="input-group">
+                <input type="text" class="form-control" name="title" placeholder="Ingrese el título de la película">
+                <div class="input-group-append">
+                <button formaction="/Home/Movies" class="btn btn-primary">
+                    <i class="fa fa-search"></i> Buscar
+                </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        @{
+            if (ViewBag.movie != null){
+                <br><br>
+                <h2>Resultados de la búsqueda:</h2>
+                <table class="table table-bordered">
+                    <tr>
+                        <td>Título</td>
+                        <td>@ViewBag.movie.Title</td>
+                    </tr>
+                    <tr>
+                        <td>A&nacute;o</td>
+                        <td>@ViewBag.movie.Year</td>
+                    </tr>
+                    <tr>
+                        <td>Género</td>
+                        <td>@ViewBag.movie.Genre</td>
+                    </tr>
+                    <tr>
+                        <td>Clasificación</td>
+                        <td>@ViewBag.movie.Rated</td>
+                    </tr>
+                    <tr>
+                        <td>Estreno</td>
+                        <td>@ViewBag.movie.Released</td>
+                    </tr>
+                    <tr>
+                        <td>Director</td>
+                        <td>@ViewBag.movie.Director</td>
+                    </tr>
+                    <tr>
+                        <td>Actores</td>
+                        <td>@ViewBag.movie.Actors</td>
+                    </tr>
+                    <tr>
+                        <td>Descripción</td>
+                        <td>@ViewBag.movie.Plot</td>
+                    </tr>
+                    <tr>
+                        <td>Recomendación:</td>
+                        <td>@ViewBag.movie.imdbRating / 10</td>
+                    </tr>
+                    <tr>
+                        <td>Poster:</td>
+                        <td><img src="@ViewBag.movie.Poster"></td>
+                    </tr>
+                </table>
+            }
+        }
+    </div>
+</div>
