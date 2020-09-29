@@ -5,10 +5,10 @@
 * C#
 * Conocimientos básicos de programación orientada a objetos
 * Conocimientos básicos de Docker
-* Conocimientos básicos de IoT
+* Conocimientos básicos de Jupyter y ML
 
 ## **Demos**  
 * [01 - Hola Mundo](demo1)
 * [02 - .NET Core MVC](demo2)
 * [03 - .NET Core Microservicios + API Gateway + Service Discovery + Cliente Web](demo3)
-* [04 - IoT con .NET Core Raspberry Pi!](demo4)
+* [04 - ML .NET](demo4)
